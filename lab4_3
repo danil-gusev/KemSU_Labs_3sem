@@ -37,7 +37,12 @@ public:
 class rectangle :public figure {
 private: double* h, * w;
 public:
-	rectangle() {};
+	rectangle() {
+		h = new double;
+		*h = 1;
+		w = new double;
+		*w = 1;
+	};
 	rectangle(double h2, double w2) {
 		h = new double;
 		*h = h2;
@@ -51,7 +56,10 @@ public:
 class regularPentagon :public figure {
 private: double* side;
 public:
-	regularPentagon() {};
+	regularPentagon() {
+		side = new double;
+		*side = 1;
+	};
 	regularPentagon(double getSide) {
 		side = new double;
 		*side = getSide;
